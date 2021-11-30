@@ -10,7 +10,7 @@
     /**
      * the name of the component workspace. used for development purposes.
      **/
-    "name": "my-workspace-name",
+    "name": "bit-exporter",
     /**
      * set the icon to be shown on the Bit server.
      **/
@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "my-scope"
+    "defaultScope": "owlkashi.base-level"
   },
   /**
    * main configuration for component dependency resolution.
@@ -57,7 +57,16 @@
       /**
        * uncomment to apply the chosen environment on all components.
        **/
-      // "teambit.react/react": { }
+      "teambit.react/react": { }
+    },
+    "base-level": {
+      "defaultScope": "owlkashi.base-level"
+    },
+    "mid-level": {
+      "defaultScope": "owlkashi.mid-level"
+    },
+    "high-level": {
+      "defaultScope": "owlkashi.high-level"
     }
   }
 }
