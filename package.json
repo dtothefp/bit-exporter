@@ -1,4 +1,7 @@
 {
   "name": "bit-exporter",
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "jsonc-parser": "^3.0.0"
+  }
 }
