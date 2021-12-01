@@ -28,8 +28,8 @@
         "rootDir": "high-level/organism/component"
     },
     "test/component": {
-        "scope": "",
-        "version": "",
+        "scope": "dtothefp.personal",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "personal/test/component"
     },
