@@ -36,10 +36,13 @@
     /**
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
-    "packageManager": "teambit.dependencies/yarn",
+    "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
+        "@commitlint/cli": "15.0.0",
+        "@commitlint/config-conventional": "15.0.0",
         "@testing-library/react": "12.1.2",
+        "husky": "7.0.4",
         "jsonc-parser": "3.0.0"
       },
       "peerDependencies": {
@@ -73,14 +76,18 @@
       "teambit.react/react": {}
     },
     "scripts": {
-      "defaultScope": "owlkashi.scripts",
+      "defaultScope": "dtothefp.scripts",
+      "teambit.harmony/node": {}
+    },
+    "scripts/verify-soft-tag": {
+      "defaultScope": "dtothefp.scripts",
       "teambit.harmony/node": {},
       "teambit.pkg/pkg": {
         "packageJson": {
           "private": false,
           "main": "dist/{main}.js",
           "bin": {
-            "verify-status": "dist/bin/index.js"
+            "verify-soft-tag": "dist/bin/index.js"
           }
         }
       }

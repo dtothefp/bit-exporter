@@ -33,11 +33,11 @@
         "mainFile": "index.ts",
         "rootDir": "personal/test/component"
     },
-    "verify/status/script": {
-        "scope": "owlkashi.scripts",
-        "version": "0.1.0",
+    "verify-soft-tag": {
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
-        "rootDir": "scripts/verify/status/script"
+        "rootDir": "scripts/verify-soft-tag"
     },
     "$schema-version": "14.9.0"
 }

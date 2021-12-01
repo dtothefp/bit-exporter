@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const errors = require('../').script();
+const errors = require('..').verifySoftTag();
 
 if (errors.length) {
   console.log(
-    errors.join('\n')
+    errors.join('\n'),
   );
 
   process.exit(1);
