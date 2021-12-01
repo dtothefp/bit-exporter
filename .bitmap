@@ -27,5 +27,11 @@
         "mainFile": "index.ts",
         "rootDir": "high-level/organism/component"
     },
+    "test/component": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "personal/test/component"
+    },
     "$schema-version": "14.9.0"
 }
