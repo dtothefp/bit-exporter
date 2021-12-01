@@ -9,5 +9,23 @@
  */
 
 {
+    "atom/component": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "base-level/atom/component"
+    },
+    "molecule/component": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "mid-level/molecule/component"
+    },
+    "organism/component": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "high-level/organism/component"
+    },
     "$schema-version": "14.9.0"
 }
