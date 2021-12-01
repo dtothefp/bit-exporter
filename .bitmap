@@ -33,5 +33,11 @@
         "mainFile": "index.ts",
         "rootDir": "personal/test/component"
     },
+    "verify/status/script": {
+        "scope": "owlkashi.scripts",
+        "version": "0.1.0",
+        "mainFile": "index.ts",
+        "rootDir": "scripts/verify/status/script"
+    },
     "$schema-version": "14.9.0"
 }

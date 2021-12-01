@@ -39,7 +39,8 @@
     "packageManager": "teambit.dependencies/yarn",
     "policy": {
       "dependencies": {
-        "@testing-library/react": "12.1.2"
+        "@testing-library/react": "12.1.2",
+        "jsonc-parser": "3.0.0"
       },
       "peerDependencies": {
         "react": "17.0.2",
@@ -55,26 +56,34 @@
    * see https://harmony-docs.bit.dev/aspects/variants for more info.
    **/
   "teambit.workspace/variants": {
-    /**
-     * "*" is a special rule which applied on all components in the workspace.
-     **/
-    "*": {
-      /**
-       * uncomment to apply the chosen environment on all components.
-       **/
+    "base-level": {
+      "defaultScope": "owlkashi.base-level",
       "teambit.react/react": {}
     },
-    "base-level": {
-      "defaultScope": "owlkashi.base-level"
-    },
     "mid-level": {
-      "defaultScope": "owlkashi.mid-level"
+      "defaultScope": "owlkashi.mid-level",
+      "teambit.react/react": {}
     },
     "high-level": {
-      "defaultScope": "owlkashi.high-level"
+      "defaultScope": "owlkashi.high-level",
+      "teambit.react/react": {}
     },
     "personal": {
-      "defaultScope": "dtothefp.personal"
+      "defaultScope": "dtothefp.personal",
+      "teambit.react/react": {}
+    },
+    "scripts": {
+      "defaultScope": "owlkashi.scripts",
+      "teambit.harmony/node": {},
+      "teambit.pkg/pkg": {
+        "packageJson": {
+          "private": false,
+          "main": "dist/{main}.js",
+          "bin": {
+            "verify-status": "dist/bin/index.js"
+          }
+        }
+      }
     }
   }
 }
