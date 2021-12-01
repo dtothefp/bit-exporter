@@ -10,19 +10,19 @@
 
 {
     "atom/component": {
-        "scope": "",
+        "scope": "owlkashi.base-level",
         "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "base-level/atom/component"
     },
     "molecule/component": {
-        "scope": "",
+        "scope": "owlkashi.mid-level",
         "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "mid-level/molecule/component"
     },
     "organism/component": {
-        "scope": "",
+        "scope": "owlkashi.high-level",
         "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "high-level/organism/component"
