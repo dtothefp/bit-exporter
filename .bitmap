@@ -11,15 +11,9 @@
 {
     "verify-soft-tag": {
         "scope": "dtothefp.scripts",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "mainFile": "index.ts",
-        "rootDir": "scripts/verify-soft-tag",
-        "nextVersion": {
-            "version": "patch",
-            "message": "parse regex for all component names",
-            "username": "dtothefp",
-            "email": "dtothefp@gmail.com"
-        }
+        "rootDir": "scripts/verify-soft-tag"
     },
     "$schema-version": "14.9.0"
 }
