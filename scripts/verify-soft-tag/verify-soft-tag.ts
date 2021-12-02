@@ -2,6 +2,7 @@ import { execSync } from 'child_process';
 import path from 'path';
 import { readFileSync } from 'fs';
 import { parse } from 'jsonc-parser';
+import { cyan } from 'chalk';
 
 export function verifySoftTag() {
   const output = execSync('bit status --json', { cwd: process.cwd() });
@@ -23,11 +24,11 @@ export function verifySoftTag() {
 
     if (isMessageMissing) {
       if (softTaggedComponents.includes(key)) {
-        list.push(`add a --message for the --soft tagged component ${key}`);
+        list.push(`a --message is required for the --soft tagged component ${cyan(key)}`);
       } else if (newComponentNames.includes(key)) {
-        list.push(`add a --soft tag with --message for new component ${key}`);
+        list.push(`add a --soft tag with --message for new component ${cyan(key)}`);
       } else if (modifiedComponentNames.includes(key)) {
-        list.push(`add a --soft tag with --message for modified component ${key}`);
+        list.push(`add a --soft tag with --message for modified component ${cyan(key)}`);
       }
     }
 

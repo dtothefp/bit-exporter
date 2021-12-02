@@ -37,7 +37,13 @@
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "scripts/verify-soft-tag"
+        "rootDir": "scripts/verify-soft-tag",
+        "nextVersion": {
+            "version": "minor",
+            "message": "intial commit",
+            "username": "dtothefp",
+            "email": "dtothefp@gmail.com"
+        }
     },
     "$schema-version": "14.9.0"
 }

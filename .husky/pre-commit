@@ -2,3 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 bit lint -c --fix
+bit compile verify-soft-tag
+node node_modules/@dtothefp/scripts.verify-soft-tag/dist/bin/index.js

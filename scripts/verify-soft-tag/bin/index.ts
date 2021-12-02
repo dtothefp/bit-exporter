@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 
-const errors = require('..').verifySoftTag();
+import { bgRed } from 'chalk';
+import { verifySoftTag } from '..';
 
-if (errors.length) {
-  console.log(
-    errors.join('\n'),
-  );
+const errors = verifySoftTag();
 
-  process.exit(1);
-} else {
+errors.forEach((error) => {
+  // eslint-disable-next-line no-console
+  console.log(`${bgRed('Error:')} ${error}`);
+});
+
+if (errors.length === 0) {
   process.exit(0);
+} else {
+  process.exit(1);
 }

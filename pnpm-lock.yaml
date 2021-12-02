@@ -13,6 +13,7 @@ importers:
       '@types/react': ^17.0.8
       '@types/react-dom': ^17.0.5
       '@types/testing-library__jest-dom': 5.9.5
+      chalk: 4.1.2
       core-js: ^3.0.0
       husky: 7.0.4
       jsonc-parser: 3.0.0
@@ -21,6 +22,7 @@ importers:
     dependencies:
       '@commitlint/cli': registry.npmjs.org/@commitlint/cli/15.0.0
       '@commitlint/config-conventional': registry.npmjs.org/@commitlint/config-conventional/15.0.0
+      chalk: registry.npmjs.org/chalk/4.1.2
       core-js: registry.npmjs.org/core-js/3.19.2
       husky: registry.npmjs.org/husky/7.0.4
       jsonc-parser: registry.npmjs.org/jsonc-parser/3.0.0
