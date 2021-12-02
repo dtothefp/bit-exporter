@@ -11,7 +11,7 @@
 {
     "verify-soft-tag": {
         "scope": "dtothefp.scripts",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "mainFile": "index.ts",
         "rootDir": "scripts/verify-soft-tag"
     },
