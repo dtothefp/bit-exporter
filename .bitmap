@@ -13,19 +13,37 @@
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "base-level/atom/component"
+        "rootDir": "base-level/atom/component",
+        "nextVersion": {
+            "version": "minor",
+            "message": "",
+            "username": "dtothefp",
+            "email": "dtothefp@gmail.com"
+        }
     },
     "molecule/component": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "mid-level/molecule/component"
+        "rootDir": "mid-level/molecule/component",
+        "nextVersion": {
+            "version": "minor",
+            "message": "initial tag",
+            "username": "dtothefp",
+            "email": "dtothefp@gmail.com"
+        }
     },
     "organism/component": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "high-level/organism/component"
+        "rootDir": "high-level/organism/component",
+        "nextVersion": {
+            "version": "minor",
+            "message": "initial tag",
+            "username": "dtothefp",
+            "email": "dtothefp@gmail.com"
+        }
     },
     "$schema-version": "14.9.0"
 }
