@@ -7,9 +7,8 @@ jest.mock('fs');
 
 const execSyncMock = execSync as jest.Mock;
 const readFileSyncMock = readFileSync as jest.Mock;
-const makeStatusOuput = (data: Record<string, unkown>):Buffer => (
-  Buffer.from(JSON.stringify(data), 'utf-8')
-);
+const makeStatusOuput = (data: Record<string, unknown>): Buffer =>
+  Buffer.from(JSON.stringify(data), 'utf-8');
 
 describe('#verifySoftTag', () => {
   afterEach(() => {
@@ -34,17 +33,21 @@ describe('#verifySoftTag', () => {
   describe('new components', () => {
     it('should return a error if component is not tagged', () => {
       const mockBitStatusJson = {
-        newComponents: [{
-          name: 'new/component',
-        }],
+        newComponents: [
+          {
+            name: 'new/component',
+          },
+        ],
         modifiedComponent: [],
         softTaggedComponents: [],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'new/component': {},
-      }));
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'new/component': {},
+        })
+      );
 
       const errors = verifySoftTag();
 
@@ -53,19 +56,23 @@ describe('#verifySoftTag', () => {
 
     it('should return a error if component is tagged without message', () => {
       const mockBitStatusJson = {
-        newComponents: [{
-          name: 'new/component',
-        }],
+        newComponents: [
+          {
+            name: 'new/component',
+          },
+        ],
         modifiedComponent: [],
         softTaggedComponents: [],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'new/component': {
-          nextVersion: {},
-        },
-      }));
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'new/component': {
+            nextVersion: {},
+          },
+        })
+      );
 
       const errors = verifySoftTag();
 
@@ -74,21 +81,25 @@ describe('#verifySoftTag', () => {
 
     it('should not return an error if component is tagged with a message', () => {
       const mockBitStatusJson = {
-        newComponents: [{
-          name: 'new/component',
-        }],
+        newComponents: [
+          {
+            name: 'new/component',
+          },
+        ],
         modifiedComponent: [],
         softTaggedComponents: [],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'new/component': {
-          nextVersion: {
-            message: 'test',
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'new/component': {
+            nextVersion: {
+              message: 'test',
+            },
           },
-        },
-      }));
+        })
+      );
 
       const errors = verifySoftTag();
 
@@ -100,16 +111,16 @@ describe('#verifySoftTag', () => {
     it('should return a error if component is not tagged', () => {
       const mockBitStatusJson = {
         newComponents: [],
-        modifiedComponent: [
-          'some.scope/modified/component@0.0.1',
-        ],
+        modifiedComponent: ['some.scope/modified/component@0.0.1'],
         softTaggedComponents: [],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'modified/component': {},
-      }));
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'modified/component': {},
+        })
+      );
 
       const errors = verifySoftTag();
 
@@ -119,18 +130,18 @@ describe('#verifySoftTag', () => {
     it('should return a error if component is tagged without message', () => {
       const mockBitStatusJson = {
         newComponents: [],
-        modifiedComponent: [
-          'some.scope/modified/component@0.0.1',
-        ],
+        modifiedComponent: ['some.scope/modified/component@0.0.1'],
         softTaggedComponents: [],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'modified/component': {
-          nextVersion: {},
-        },
-      }));
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'modified/component': {
+            nextVersion: {},
+          },
+        })
+      );
 
       const errors = verifySoftTag();
 
@@ -140,20 +151,20 @@ describe('#verifySoftTag', () => {
     it('should not return an error if component is tagged with a message', () => {
       const mockBitStatusJson = {
         newComponents: [],
-        modifiedComponent: [
-          'some.scope/modified/component@0.0.1',
-        ],
+        modifiedComponent: ['some.scope/modified/component@0.0.1'],
         softTaggedComponents: [],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'modified/component': {
-          nextVersion: {
-            message: 'test',
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'modified/component': {
+            nextVersion: {
+              message: 'test',
+            },
           },
-        },
-      }));
+        })
+      );
 
       const errors = verifySoftTag();
 
@@ -166,17 +177,17 @@ describe('#verifySoftTag', () => {
       const mockBitStatusJson = {
         newComponents: [],
         modifiedComponent: [],
-        softTaggedComponents: [
-          'modified/component',
-        ],
+        softTaggedComponents: ['modified/component'],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'modified/component': {
-          nextVersion: {},
-        },
-      }));
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'modified/component': {
+            nextVersion: {},
+          },
+        })
+      );
 
       const errors = verifySoftTag();
 
@@ -187,19 +198,19 @@ describe('#verifySoftTag', () => {
       const mockBitStatusJson = {
         newComponents: [],
         modifiedComponent: [],
-        softTaggedComponents: [
-          'modified/component',
-        ],
+        softTaggedComponents: ['modified/component'],
       };
 
       execSyncMock.mockReturnValueOnce(makeStatusOuput(mockBitStatusJson));
-      readFileSyncMock.mockReturnValueOnce(JSON.stringify({
-        'modified/component': {
-          nextVersion: {
-            message: 'test',
+      readFileSyncMock.mockReturnValueOnce(
+        JSON.stringify({
+          'modified/component': {
+            nextVersion: {
+              message: 'test',
+            },
           },
-        },
-      }));
+        })
+      );
 
       const errors = verifySoftTag();
 

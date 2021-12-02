@@ -60,22 +60,6 @@
    * see https://harmony-docs.bit.dev/aspects/variants for more info.
    **/
   "teambit.workspace/variants": {
-    "base-level": {
-      "defaultScope": "owlkashi.base-level",
-      "teambit.react/react": {}
-    },
-    "mid-level": {
-      "defaultScope": "owlkashi.mid-level",
-      "teambit.react/react": {}
-    },
-    "high-level": {
-      "defaultScope": "owlkashi.high-level",
-      "teambit.react/react": {}
-    },
-    "personal": {
-      "defaultScope": "dtothefp.personal",
-      "teambit.react/react": {}
-    },
     "scripts": {
       "defaultScope": "dtothefp.scripts",
       "teambit.harmony/node": {}
