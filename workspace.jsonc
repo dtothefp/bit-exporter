@@ -36,10 +36,15 @@
     /**
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
-    "packageManager": "teambit.dependencies/yarn",
+    "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
-        "@testing-library/react": "12.1.2"
+        "@commitlint/cli": "15.0.0",
+        "@commitlint/config-conventional": "15.0.0",
+        "@testing-library/react": "12.1.2",
+        "chalk": "4.1.2",
+        "husky": "7.0.4",
+        "jsonc-parser": "3.0.0"
       },
       "peerDependencies": {
         "react": "17.0.2",
@@ -55,26 +60,22 @@
    * see https://harmony-docs.bit.dev/aspects/variants for more info.
    **/
   "teambit.workspace/variants": {
-    /**
-     * "*" is a special rule which applied on all components in the workspace.
-     **/
-    "*": {
-      /**
-       * uncomment to apply the chosen environment on all components.
-       **/
-      "teambit.react/react": {}
+    "scripts": {
+      "defaultScope": "dtothefp.scripts",
+      "teambit.harmony/node": {}
     },
-    "base-level": {
-      "defaultScope": "owlkashi.base-level"
-    },
-    "mid-level": {
-      "defaultScope": "owlkashi.mid-level"
-    },
-    "high-level": {
-      "defaultScope": "owlkashi.high-level"
-    },
-    "personal": {
-      "defaultScope": "dtothefp.personal"
+    "scripts/verify-soft-tag": {
+      "defaultScope": "dtothefp.scripts",
+      "teambit.harmony/node": {},
+      "teambit.pkg/pkg": {
+        "packageJson": {
+          "private": false,
+          "main": "dist/{main}.js",
+          "bin": {
+            "verify-soft-tag": "dist/bin/index.js"
+          }
+        }
+      }
     }
   }
 }

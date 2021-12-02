@@ -9,29 +9,11 @@
  */
 
 {
-    "atom/component": {
-        "scope": "owlkashi.base-level",
+    "verify-soft-tag": {
+        "scope": "dtothefp.scripts",
         "version": "0.1.0",
         "mainFile": "index.ts",
-        "rootDir": "base-level/atom/component"
-    },
-    "molecule/component": {
-        "scope": "owlkashi.mid-level",
-        "version": "0.1.0",
-        "mainFile": "index.ts",
-        "rootDir": "mid-level/molecule/component"
-    },
-    "organism/component": {
-        "scope": "owlkashi.high-level",
-        "version": "0.1.0",
-        "mainFile": "index.ts",
-        "rootDir": "high-level/organism/component"
-    },
-    "test/component": {
-        "scope": "dtothefp.personal",
-        "version": "0.1.0",
-        "mainFile": "index.ts",
-        "rootDir": "personal/test/component"
+        "rootDir": "scripts/verify-soft-tag"
     },
     "$schema-version": "14.9.0"
 }
