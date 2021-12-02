@@ -72,6 +72,9 @@
     },
     "high-level": {
       "defaultScope": "owlkashi.high-level"
+    },
+    "personal": {
+      "defaultScope": "dtothefp.personal"
     }
   }
 }
