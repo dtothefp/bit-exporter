@@ -39,6 +39,7 @@
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
+        "@teambit/dependencies.modules.packages-excluder": "0.0.49",
         "@testing-library/react": "12.1.2",
         "chalk": "4.1.2",
         "jsonc-parser": "3.0.0"
@@ -59,9 +60,12 @@
    * see https://harmony-docs.bit.dev/aspects/variants for more info.
    **/
   "teambit.workspace/variants": {
+    "envs": {
+      "defaultScope": "dtothefp.envs"
+    },
     "api": {
       "defaultScope": "dtothefp.api",
-      "teambit.react/react": {}
+      "dtothefp.envs/custom-react-env": {}
     },
     "scripts": {
       "defaultScope": "dtothefp.scripts",
