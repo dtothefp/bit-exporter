@@ -44,6 +44,11 @@
         "jsonc-parser": "3.0.0"
       },
       "peerDependencies": {
+        "@apollo/client": "^3.5.5",
+        "graphql": "16.0.1",
+        "js-cookie": "3.0.1",
+        "lodash": "4.17.21",
+        "react": "17.0.2",
         "react": "17.0.2",
         "react-dom": "17.0.2"
       }
@@ -57,6 +62,10 @@
    * see https://harmony-docs.bit.dev/aspects/variants for more info.
    **/
   "teambit.workspace/variants": {
+    "api": {
+      "defaultScope": "dtothefp.api",
+      "teambit.react/react": {}
+    },
     "scripts": {
       "defaultScope": "dtothefp.scripts",
       "teambit.harmony/node": {}
