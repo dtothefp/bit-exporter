@@ -9,6 +9,30 @@
  */
 
 {
+    "custom-react-env": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "envs/custom-react-env",
+        "nextVersion": {
+            "version": "patch",
+            "message": "create custom react env",
+            "username": "dtothefp",
+            "email": "dtothefp@gmail.com"
+        }
+    },
+    "initialize-apollo": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "api/initialize-apollo",
+        "nextVersion": {
+            "version": "patch",
+            "message": "add apollo 3.5",
+            "username": "dtothefp",
+            "email": "dtothefp@gmail.com"
+        }
+    },
     "verify-soft-tag": {
         "scope": "dtothefp.scripts",
         "version": "0.1.1",
