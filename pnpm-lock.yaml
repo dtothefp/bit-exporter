@@ -18,9 +18,7 @@ importers:
       core-js: ^3.0.0
       graphql: 16.0.1
       husky: 7.0.4
-      js-cookie: 3.0.1
       jsonc-parser: 3.0.0
-      lodash: 4.17.21
       react: 17.0.2
       react-dom: ^16.8.0 || ^17.0.0
     dependencies:
@@ -32,9 +30,7 @@ importers:
       core-js: registry.npmjs.org/core-js/3.20.0
       graphql: registry.npmjs.org/graphql/16.0.1
       husky: registry.npmjs.org/husky/7.0.4
-      js-cookie: registry.npmjs.org/js-cookie/3.0.1
       jsonc-parser: registry.npmjs.org/jsonc-parser/3.0.0
-      lodash: registry.npmjs.org/lodash/4.17.21
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     devDependencies:
@@ -1144,13 +1140,6 @@ packages:
     version: 26.3.0
     engines: {node: '>= 10.14.2'}
     dev: true
-
-  registry.npmjs.org/js-cookie/3.0.1:
-    resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/js-cookie/-/js-cookie-3.0.1.tgz}
-    name: js-cookie
-    version: 3.0.1
-    engines: {node: '>=12'}
-    dev: false
 
   registry.npmjs.org/js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz}
